@@ -31,16 +31,22 @@ service BreweryService {
 }
 
 message Filter {
-  string query = 1;  
-  int32 count = 2;
+  string query = 1; 
+  string by_city =2;
+  string by_dist = 3;
+  string by_name = 4;
+  string by_state = 5;
+  string by_postal = 6;
+  string by_type = 7;
+  int32 page = 8; 
+  int32 per_page = 9;
+  string sort = 10; 
+  int32 count = 11;
 }
 
 message BreweryCountRespose {
   int32 count = 1;
 }
-
-
-
 
 message Brewery{
   string id = 1;
@@ -51,13 +57,13 @@ message Brewery{
   string address_3 = 6;
   string city = 7;
   string state = 8;
-  string countryprov = 9;
-  string postalcode = 10;
+  string country_province = 9;
+  string postal_code = 10;
   string country = 11;
   string longitude = 12;
   string latitude = 13;
   string phone = 14;
   string website_url = 15;
-  string updated = 16;
-  string created = 17;
+  string updated_at = 16;
+  string created_at = 17;
 }

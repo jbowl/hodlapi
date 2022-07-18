@@ -10,9 +10,10 @@
 
    // cp -r . /home/j/jsoft/github.com/jbowl/findbrewery_root/dispatch/hodlapi
 
-   // cp -r . /home/j/jsoft/github.com/jbowl/hodlmybeer/hodlmybeer/hodlapi
+   // cp -r . /home/j/jsoft/github.com/jbowl/hodlmybeer/hodlmybeer/hodlapi  copies .git
    // cp -r . /home/j/jsoft/github.com/jbowl/hodlmybeer/brewery/hodlapi
-
+// cp *.go go.mod  /home/j/jsoft/github.com/jbowl/hodlmybeer/brewery/hodlapi
+cp *.go go.mod /home/j/jsoft/github.com/jbowl/hodlmybeer/hodlmybeer/hodlapi
 */
 syntax = "proto3";
 
@@ -32,16 +33,6 @@ service BreweryService {
 
 message Filter {
   string query = 1; 
-  string by_city =2;
-  string by_dist = 3;
-  string by_name = 4;
-  string by_state = 5;
-  string by_postal = 6;
-  string by_type = 7;
-  int32 page = 8; 
-  int32 per_page = 9;
-  string sort = 10; 
-  int32 count = 11;
 }
 
 message BreweryCountRespose {
